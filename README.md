@@ -90,8 +90,8 @@ a new ENI and start using following allocation scheme:
 For example, a m4.4xlarge node can have up to 8 ENIs, and each ENI can have up to 30 IP addresses. See
 [Elastic Network Interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for details.
 
-* If the number of current running Pods is between 0 and 29, ipamd will allocate one more eni. And Warm-Pool size is 2 eni * (30 -1) = 58
-* If the number of current running Pods is between 30 and 58, ipamd will allocate 2 more eni. And Warm-Pool size is 3 eni * (30 -1) = 87
+* If the number of current running Pods is between 0 and 29, ipamd will allocate one more eni; Warm-Pool size is 2 eni * (30 -1) = 58
+* If the number of current running Pods is between 30 and 58, ipamd will allocate 2 more eni; And Warm-Pool size is 3 eni * (30 -1) = 87
 
 For a detailed explanation, see [`WARM_ENI_TARGET`, `WARM_IP_TARGET` and `MINIMUM_IP_TARGET`](https://github.com/aws/amazon-vpc-cni-k8s/blob/master/docs/eni-and-ip-target.md).
 
