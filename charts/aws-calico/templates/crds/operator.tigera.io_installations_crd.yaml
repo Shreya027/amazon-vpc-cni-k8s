@@ -1142,6 +1142,11 @@ spec:
                       be configured through FelixConfiguration.
                     format: int32
                     type: integer
+                  typhaMetricsPort: 
+                    description: TyphaMetricsPort specifies which port calico/node serves 
+                      prometheus metrics on. By default, metrics are not enabled.
+                    format: int32 
+                    type: integer
                   nodeUpdateStrategy:
                     description: NodeUpdateStrategy can be used to customize the desired
                       update strategy, such as the MaxUnavailable field.
